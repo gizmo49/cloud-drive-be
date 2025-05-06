@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { UserDocument } from '@/models/User';
+import { UserDocument } from '../models/User';
 
 type AuthenticatedHandler = (req: Request & { user: UserDocument }, res: Response) => Promise<void>;
 

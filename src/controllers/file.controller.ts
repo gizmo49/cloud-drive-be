@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import FileService from '../services/file.service';
-import { UserDocument } from '@/models/User';
+import { UserDocument } from '../models/User';
 import { _SUCCESS, _INTERNAL_ERROR, _NOT_FOUND } from '../utils/httpResponses';
 
 export class FileController {
