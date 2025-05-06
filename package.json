@@ -5,7 +5,7 @@
   "main": "src/app.ts",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/app.ts",
-    "build": "tsc",
+    "build": "tsc -p tsconfig.json",
     "start": "node dist/app.js",
     "lint": "eslint . --ext .ts",
     "test": "jest"
