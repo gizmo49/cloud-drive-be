@@ -15,7 +15,6 @@ export class AuthController {
       const result = await this.authService.register(email, password);
       return _SUCCESS(res, result, 'User registered successfully');
     } catch (error: any) {
-      console.log(error);
       if (error.message === 'User already exists') {
         return _BAD_REQUEST(res, null, error.message);
       }

@@ -100,9 +100,7 @@ export const uploadFile = async (
 
     // Select bucket based on type
     const bucketName = buckets[bucketType];
-    console.log(bucketName);
-    console.log(buckets);
-    console.log(bucketType);
+ 
     if (!bucketName) {
       throw new Error(`Invalid bucket type: ${bucketType}`);
     }
@@ -144,7 +142,6 @@ export const uploadFile = async (
       fileInfo
     };
   } catch (error) {
-    console.error("Error uploading file to S3:", error);
     return {
       success: false,
       error: error instanceof Error ? error.message : 'Unknown error during upload'
@@ -204,7 +201,6 @@ export const generateSignedUrl = async (
       expiresIn
     };
   } catch (error) {
-    console.error("Error generating signed URL:", error);
     return {
       success: false,
       error: error instanceof Error ? error.message : 'Unknown error generating URL'
@@ -249,7 +245,6 @@ export const deleteFile = async (
       message: `File ${objectKey} deleted successfully`
     };
   } catch (error) {
-    console.error("Error deleting file from S3:", error);
     return {
       success: false,
       error: error instanceof Error ? error.message : 'Unknown error during deletion'
@@ -293,7 +288,6 @@ export const fileExists = async (
       return { success: true, exists: false };
     }
 
-    console.error("Error checking if file exists:", error);
     return {
       success: false,
       error: error instanceof Error ? error.message : 'Unknown error checking file'

@@ -32,7 +32,6 @@ class FileService {
         if (!uploadResult.success || !uploadResult.fileInfo) {
             throw new Error(uploadResult.error || 'Failed to upload file');
         }
-        console.log("uploadResult", uploadResult);
 
         // Create and save file record
         const newFile = new File({

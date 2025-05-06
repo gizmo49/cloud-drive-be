@@ -31,7 +31,6 @@ export class FileController {
             return _SUCCESS(res, uploadedFile, 'File Uploaded successfully');
             
         } catch (error) {
-            console.error(error);
             _INTERNAL_ERROR(res);
         }
     }

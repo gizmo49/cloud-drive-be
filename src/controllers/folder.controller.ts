@@ -42,7 +42,6 @@ class FolderController {
             });
             _SUCCESS(res, folder, 'Folder created successfully');
         } catch (error) {
-            console.log(error);
             _INTERNAL_ERROR(res);
         }
     }
